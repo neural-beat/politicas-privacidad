@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titan · Privacidad</title>
+<meta name="description" content="Política de privacidad de Titan, el cliente SSH para iPhone y iPad.">
+<style>
+  :root {
+    --fondo: #ffffff;
+    --texto: #1d1d1f;
+    --suave: #515154;
+    --linea: #d2d2d7;
+    --acento: #0a7d55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #000000;
+      --texto: #f5f5f7;
+      --suave: #a1a1a6;
+      --linea: #38383a;
+      --acento: #34c77b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 21px; margin: 36px 0 8px; }
+  p, li { color: var(--texto); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .fecha { color: var(--suave); margin: 0 0 28px; }
+  .resumen { border-left: 3px solid var(--acento); padding: 4px 0 4px 16px; margin: 0 0 8px; }
+  a { color: var(--acento); }
+  nav { margin: 0 0 32px; color: var(--suave); }
+  hr { border: 0; border-top: 1px solid var(--linea); margin: 56px 0 40px; }
+</style>
+</head>
+<body>
+<main>
+
+<nav><a href="#es">Español</a> · <a href="#en">English</a></nav>
+
+<section id="es" lang="es">
+<h1>Privacidad de Titan</h1>
+<p class="fecha">Última actualización: 15 de noviembre de 2026</p>
+<p class="resumen">Titan no tiene cuentas, ni anuncios, ni estadísticas de uso. Lo que guardas se queda en tu dispositivo y nosotros no recibimos ningún dato tuyo.</p>
+
+<h2>A quién se conecta la app</h2>
+<p>Titan se conecta únicamente a los servidores que tú añades, directamente desde tu dispositivo y por SSH. Ningún dato pasa por nosotros ni por terceros. Si configuras un proxy SOCKS5 o HTTP, la conexión pasa por el que tú indiques.</p>
+
+<h2>Lo que se guarda en tu dispositivo</h2>
+<p>La lista de servidores, tus comandos guardados, el historial, las preferencias y, si lo activas, los registros de sesión. Las contraseñas y las claves privadas se guardan en el Llavero de iOS, protegidas por Face ID, Touch ID o el código de Titan. Si borras la app, se borra con ella.</p>
+
+<h2>iCloud (opcional)</h2>
+<p>Si lo activas, la lista de servidores se sincroniza con tus otros dispositivos mediante tu propia cuenta de iCloud (almacén de clave-valor y, si lo eliges, Llavero de iCloud). Apple gestiona ese almacenamiento; nosotros no tenemos acceso a él.</p>
+
+<h2>Copias de seguridad</h2>
+<p>Las copias <code>.titan</code> se cifran con la contraseña que elijas y se guardan donde tú decidas. Si pierdes la contraseña no se pueden recuperar.</p>
+
+<h2>Avisos</h2>
+<p>Las notificaciones (por ejemplo, la campana del terminal) las genera el propio dispositivo. No usamos ningún servicio de notificaciones remotas.</p>
+
+<h2>Lo que no hacemos</h2>
+<ul>
+  <li>No hay registro ni inicio de sesión.</li>
+  <li>No hay publicidad ni rastreo entre apps.</li>
+  <li>No hay herramientas de analítica ni de informes de errores de terceros.</li>
+  <li>No vendemos ni compartimos datos, porque no los tenemos.</li>
+</ul>
+
+<h2>Menores</h2>
+<p>La app no está dirigida a menores de 13 años y no recoge datos de nadie, tampoco de ellos.</p>
+
+<h2>Cambios y contacto</h2>
+<p>Si algún día la app empieza a compartir datos, lo diremos aquí antes de activarlo y cambiaremos la fecha de arriba.</p>
+<p>Para cualquier duda: <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Titan Privacy Policy</h1>
+<p class="fecha">Last updated: 15 November 2026</p>
+<p class="resumen">Titan has no accounts, no ads and no usage analytics. What you save stays on your device and we never receive any of your data.</p>
+
+<h2>Who the app connects to</h2>
+<p>Titan connects only to the servers you add, directly from your device over SSH. Nothing goes through us or through third parties. If you set up a SOCKS5 or HTTP proxy, the connection goes through the one you choose.</p>
+
+<h2>What is stored on your device</h2>
+<p>Your server list, saved commands, history, preferences and, if you turn it on, session logs. Passwords and private keys are stored in the iOS Keychain, protected by Face ID, Touch ID or Titan's own passcode. If you delete the app, it is deleted too.</p>
+
+<h2>iCloud (optional)</h2>
+<p>If you turn it on, your server list syncs to your other devices through your own iCloud account (key-value store and, if you choose, iCloud Keychain). Apple manages that storage; we have no access to it.</p>
+
+<h2>Backups</h2>
+<p><code>.titan</code> backups are encrypted with the password you choose and saved wherever you decide. If you lose the password they cannot be recovered.</p>
+
+<h2>Notifications</h2>
+<p>Notifications (for example, the terminal bell) are created by the device itself. We do not use any remote notification service.</p>
+
+<h2>What we don't do</h2>
+<ul>
+  <li>No sign-up or log-in.</li>
+  <li>No advertising and no cross-app tracking.</li>
+  <li>No third-party analytics or crash-reporting tools.</li>
+  <li>We don't sell or share data, because we don't have any.</li>
+</ul>
+
+<h2>Children</h2>
+<p>The app is not aimed at children under 13 and collects no data from anyone, including them.</p>
+
+<h2>Changes and contact</h2>
+<p>If the app ever starts sharing data, we will say so here before turning it on and change the date above.</p>
+<p>Questions: <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a></p>
+</section>
+
+</main>
+</body>
+</html>

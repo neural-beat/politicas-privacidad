@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titan · Soporte</title>
+<meta name="description" content="Soporte de Titan, el cliente SSH para iPhone y iPad.">
+<style>
+  :root {
+    --fondo: #ffffff;
+    --texto: #1d1d1f;
+    --suave: #515154;
+    --linea: #d2d2d7;
+    --acento: #0a7d55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #000000;
+      --texto: #f5f5f7;
+      --suave: #a1a1a6;
+      --linea: #38383a;
+      --acento: #34c77b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 21px; margin: 36px 0 8px; }
+  p, li { color: var(--texto); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .fecha { color: var(--suave); margin: 0 0 28px; }
+  .resumen { border-left: 3px solid var(--acento); padding: 4px 0 4px 16px; margin: 0 0 8px; }
+  a { color: var(--acento); }
+  nav { margin: 0 0 32px; color: var(--suave); }
+  hr { border: 0; border-top: 1px solid var(--linea); margin: 56px 0 40px; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#es">Español</a> · <a href="#en">English</a></nav>
+<section id="es" lang="es">
+<h1>Soporte de Titan</h1>
+<p>Titan es un cliente SSH para iPhone y iPad. Si algo no funciona o tienes una idea, escríbenos a <a href="mailto:neuralbeat.dev@gmail.com?subject=Titan">neuralbeat.dev@gmail.com</a> y te respondemos lo antes posible.</p>
+<h2>Primeros pasos</h2>
+<ul>
+  <li>Tu servidor necesita tener SSH activo (en Linux, el paquete <code>openssh-server</code>).</li>
+  <li>En Titan pulsa + y rellena dirección, puerto (22), usuario y contraseña o clave.</li>
+  <li>Para usar clave: créala en Llaves e instálala en el servidor desde ahí.</li>
+  <li>No hace falta instalar nada más en el servidor.</li>
+</ul>
+<h2>Si no conecta</h2>
+<ul>
+  <li>Comprueba que el servidor responde por SSH desde otro equipo y que el puerto está abierto.</li>
+  <li>En red local, permite el acceso a la red local cuando iOS lo pida.</li>
+  <li>Si cambió la huella del servidor, Titan avisa y rechaza la conexión por seguridad.</li>
+</ul>
+<p>Política de privacidad: <a href="titan_privacy_policy.html">titan_privacy_policy.html</a></p>
+</section>
+<hr>
+<section id="en" lang="en">
+<h1>Titan Support</h1>
+<p>Titan is an SSH client for iPhone and iPad. If something does not work or you have an idea, write to <a href="mailto:neuralbeat.dev@gmail.com?subject=Titan">neuralbeat.dev@gmail.com</a> and we will reply as soon as we can.</p>
+<h2>Getting started</h2>
+<ul>
+  <li>Your server needs SSH running (on Linux, the <code>openssh-server</code> package).</li>
+  <li>In Titan tap + and fill in address, port (22), user, and a password or key.</li>
+  <li>To use a key: create it in Keys and install it on the server from there.</li>
+  <li>Nothing else needs to be installed on the server.</li>
+</ul>
+<h2>If it won't connect</h2>
+<ul>
+  <li>Check that the server answers SSH from another machine and the port is open.</li>
+  <li>On a local network, allow local network access when iOS asks.</li>
+  <li>If the server's fingerprint changed, Titan warns you and refuses the connection for safety.</li>
+</ul>
+<p>Privacy policy: <a href="titan_privacy_policy.html">titan_privacy_policy.html</a></p>
+</section>
+</main>
+</body>
+</html>
