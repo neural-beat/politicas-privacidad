@@ -2,126 +2,194 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<title>Política de privacidad — Titan</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Titan · Privacidad</title>
-<meta name="description" content="Política de privacidad de Titan, el cliente SSH para iPhone y iPad.">
 <style>
-  :root {
-    --fondo: #ffffff;
-    --texto: #1d1d1f;
-    --suave: #515154;
-    --linea: #d2d2d7;
-    --acento: #0a7d55;
-  }
+  body { font-family: system-ui, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 16px; line-height: 1.5; color: #222; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --fondo: #000000;
-      --texto: #f5f5f7;
-      --suave: #a1a1a6;
-      --linea: #38383a;
-      --acento: #34c77b;
-    }
+    body { background: #111; color: #ddd; } th { background: #222; } th, td { border-color: #444; } a { color: #8ab4ff; }
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--fondo);
-    color: var(--texto);
-    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-    -webkit-text-size-adjust: 100%;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
-  h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
-  h2 { font-size: 21px; margin: 36px 0 8px; }
-  p, li { color: var(--texto); }
-  ul { padding-left: 20px; }
-  li { margin: 6px 0; }
-  .fecha { color: var(--suave); margin: 0 0 28px; }
-  .resumen { border-left: 3px solid var(--acento); padding: 4px 0 4px 16px; margin: 0 0 8px; }
-  a { color: var(--acento); }
-  nav { margin: 0 0 32px; color: var(--suave); }
-  hr { border: 0; border-top: 1px solid var(--linea); margin: 56px 0 40px; }
 </style>
 </head>
 <body>
-<main>
+<p><a href="#en">English version below</a></p>
+<h1>Política de privacidad de Titan</h1>
+<p>Última actualización: 19 de noviembre de 2026</p>
+<p>Titan es una aplicación de Neural Beat para conectarte por SSH a tus
+servidores desde el iPhone y el iPad. Esta política explica qué datos usa
+la app, dónde se guardan, con quién se comparten, cuánto tiempo se
+conservan y cómo puedes borrarlos.</p>
 
-<nav><a href="#es">Español</a> · <a href="#en">English</a></nav>
+<h2>1. Responsable</h2>
+<p>Jean Michel Matos Rodríguez (Neural Beat), Spain. Contacto:
+<a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>.</p>
 
-<section id="es" lang="es">
-<h1>Privacidad de Titan</h1>
-<p class="fecha">Última actualización: 15 de noviembre de 2026</p>
-<p class="resumen">Titan no tiene cuentas, ni anuncios, ni estadísticas de uso. Lo que guardas se queda en tu dispositivo y nosotros no recibimos ningún dato tuyo.</p>
+<h2>2. Qué datos recogemos y cómo</h2>
+<p>Titan no tiene cuentas, ni anuncios, ni estadísticas de uso. Lo que
+guardas se queda en tu dispositivo y nosotros no recibimos ningún dato
+tuyo.</p>
+<table>
+  <tr><th>Dato</th><th>Cómo se obtiene</th><th>Para qué se usa</th><th>¿Sale del dispositivo?</th></tr>
+  <tr><td>Servidores</td><td>Los que tú añades: dirección, puerto y usuario.</td>
+      <td>Conectarte a ellos por SSH.</td>
+      <td>Solo hacia tus servidores, directamente desde tu dispositivo. Si configuras un proxy SOCKS5 o HTTP, la conexión pasa por el que tú indiques. Nada pasa por nosotros.</td></tr>
+  <tr><td>Contraseñas y claves privadas</td><td>Las que escribes, generas o importas.</td>
+      <td>Identificarte en tus servidores.</td>
+      <td>Se guardan en el Llavero de iOS, protegidas por Face ID, Touch ID o el código de Titan. Solo van al Llavero de iCloud si tú lo eliges.</td></tr>
+  <tr><td>Comandos guardados, historial, preferencias y registros de sesión (si los activas)</td><td>Lo que tú configuras y usas.</td>
+      <td>Funcionamiento de la app.</td><td>No. Se quedan en tu dispositivo.</td></tr>
+  <tr><td>Sincronización con iCloud (opcional)</td><td>Si la activas, la lista de servidores.</td>
+      <td>Tenerla en tus otros dispositivos.</td>
+      <td>Sí, a tu propia cuenta de iCloud (almacén de clave-valor y, si lo eliges, Llavero de iCloud). Apple gestiona ese almacenamiento; nosotros no tenemos acceso a él.</td></tr>
+  <tr><td>Copias de seguridad <code>.titan</code></td><td>Las que tú creas.</td>
+      <td>Guardar y recuperar tu configuración.</td>
+      <td>Se cifran con la contraseña que elijas y se guardan donde tú decidas. Si pierdes la contraseña no se pueden recuperar.</td></tr>
+  <tr><td>Avisos</td><td>Los genera el propio dispositivo (por ejemplo, la campana del terminal).</td>
+      <td>Avisarte de lo que pasa en una sesión.</td><td>No. No usamos ningún servicio de notificaciones remotas.</td></tr>
+</table>
 
-<h2>A quién se conecta la app</h2>
-<p>Titan se conecta únicamente a los servidores que tú añades, directamente desde tu dispositivo y por SSH. Ningún dato pasa por nosotros ni por terceros. Si configuras un proxy SOCKS5 o HTTP, la conexión pasa por el que tú indiques.</p>
+<h2>3. Base legal</h2>
+<p>Los datos que guarda la app son los necesarios para darte las funciones
+que pides (ejecución del servicio). Face ID, Touch ID y las notificaciones
+dependen de los permisos de iOS, que puedes retirar cuando quieras en
+Ajustes.</p>
 
-<h2>Lo que se guarda en tu dispositivo</h2>
-<p>La lista de servidores, tus comandos guardados, el historial, las preferencias y, si lo activas, los registros de sesión. Las contraseñas y las claves privadas se guardan en el Llavero de iOS, protegidas por Face ID, Touch ID o el código de Titan. Si borras la app, se borra con ella.</p>
-
-<h2>iCloud (opcional)</h2>
-<p>Si lo activas, la lista de servidores se sincroniza con tus otros dispositivos mediante tu propia cuenta de iCloud (almacén de clave-valor y, si lo eliges, Llavero de iCloud). Apple gestiona ese almacenamiento; nosotros no tenemos acceso a él.</p>
-
-<h2>Copias de seguridad</h2>
-<p>Las copias <code>.titan</code> se cifran con la contraseña que elijas y se guardan donde tú decidas. Si pierdes la contraseña no se pueden recuperar.</p>
-
-<h2>Avisos</h2>
-<p>Las notificaciones (por ejemplo, la campana del terminal) las genera el propio dispositivo. No usamos ningún servicio de notificaciones remotas.</p>
-
-<h2>Lo que no hacemos</h2>
+<h2>4. Con quién se comparten</h2>
+<p>No vendemos ni cedemos datos a nadie, porque no los tenemos. No hay
+publicidad, ni rastreo entre apps, ni herramientas de analítica o de
+informes de errores de terceros. La app solo habla con:</p>
 <ul>
-  <li>No hay registro ni inicio de sesión.</li>
-  <li>No hay publicidad ni rastreo entre apps.</li>
-  <li>No hay herramientas de analítica ni de informes de errores de terceros.</li>
-  <li>No vendemos ni compartimos datos, porque no los tenemos.</li>
+  <li><strong>Tus servidores</strong> y, si lo configuras, el proxy que tú elijas.</li>
+  <li><strong>Apple</strong>: el Llavero de iOS y, solo si activas la sincronización, tu iCloud. <a href="https://www.apple.com/es/legal/privacy/">Política de Apple</a>.</li>
 </ul>
 
-<h2>Menores</h2>
-<p>La app no está dirigida a menores de 13 años y no recoge datos de nadie, tampoco de ellos.</p>
+<h2>5. Cuánto tiempo se guardan</h2>
+<ul>
+  <li>Lo que está en tu dispositivo se guarda hasta que lo borras en la app o borras la app.</li>
+  <li>Lo sincronizado con iCloud se guarda en tu cuenta hasta que lo borras o desactivas la sincronización.</li>
+  <li>Las copias <code>.titan</code> se quedan donde las guardaste hasta que las borres.</li>
+</ul>
 
-<h2>Cambios y contacto</h2>
-<p>Si algún día la app empieza a compartir datos, lo diremos aquí antes de activarlo y cambiaremos la fecha de arriba.</p>
-<p>Para cualquier duda: <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a></p>
-</section>
+<h2>6. Cómo borrar tus datos y retirar el consentimiento</h2>
+<ul>
+  <li><strong>Desde la app</strong>: borra los servidores, comandos o registros que no quieras guardar.</li>
+  <li><strong>Borrando la app</strong>: se borra todo lo que estaba en el dispositivo.</li>
+  <li><strong>iCloud</strong>: desactiva la sincronización en Titan o gestiona tu almacenamiento en los Ajustes de iOS.</li>
+  <li><strong>Permisos</strong>: Face ID y notificaciones se retiran en los Ajustes de iOS.</li>
+  <li><strong>Por correo</strong>: escribe a <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>. Como no tenemos ningún dato tuyo, te contestaremos explicando cómo borrar lo que esté en tu dispositivo o en tu iCloud.</li>
+</ul>
 
-<hr>
+<h2>7. Tus derechos</h2>
+<p>Puedes pedir acceso, rectificación, supresión, limitación, oposición y
+portabilidad de tus datos escribiendo al correo de contacto. Si crees que
+no se han respetado, puedes reclamar ante la Agencia Española de
+Protección de Datos (<a href="https://www.aepd.es">aepd.es</a>).</p>
 
-<section id="en" lang="en">
+<h2>8. Menores</h2>
+<p>Esta app no está dirigida a menores de 14 años y no recoge datos de
+nadie, tampoco de ellos.</p>
+
+<h2>9. Cambios</h2>
+<p>Si esta política cambia, se actualizará esta página y su fecha. Si algún
+día la app empieza a compartir datos, lo diremos aquí antes de activarlo.</p>
+
+<h2>10. Contacto</h2>
+<p>Para cualquier duda:
+<a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>.</p>
+
+<hr id="en">
+
+<div lang="en">
 <h1>Titan Privacy Policy</h1>
-<p class="fecha">Last updated: 15 November 2026</p>
-<p class="resumen">Titan has no accounts, no ads and no usage analytics. What you save stays on your device and we never receive any of your data.</p>
+<p>Last updated: 19 November 2026</p>
+<p>Titan is an app by Neural Beat for connecting to your servers over SSH
+from iPhone and iPad. This policy explains what data the app uses, where
+it is stored, who it is shared with, how long it is kept and how you can
+delete it.</p>
 
-<h2>Who the app connects to</h2>
-<p>Titan connects only to the servers you add, directly from your device over SSH. Nothing goes through us or through third parties. If you set up a SOCKS5 or HTTP proxy, the connection goes through the one you choose.</p>
+<h2>1. Data controller</h2>
+<p>Jean Michel Matos Rodríguez (Neural Beat), Spain. Contact:
+<a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>.</p>
 
-<h2>What is stored on your device</h2>
-<p>Your server list, saved commands, history, preferences and, if you turn it on, session logs. Passwords and private keys are stored in the iOS Keychain, protected by Face ID, Touch ID or Titan's own passcode. If you delete the app, it is deleted too.</p>
+<h2>2. What data we collect and how</h2>
+<p>Titan has no accounts, no ads and no usage analytics. What you save
+stays on your device and we never receive any of your data.</p>
+<table>
+  <tr><th>Data</th><th>How it is obtained</th><th>What it is used for</th><th>Does it leave the device?</th></tr>
+  <tr><td>Servers</td><td>The ones you add: address, port and user.</td>
+      <td>Connecting to them over SSH.</td>
+      <td>Only to your servers, directly from your device. If you set up a SOCKS5 or HTTP proxy, the connection goes through the one you choose. Nothing goes through us.</td></tr>
+  <tr><td>Passwords and private keys</td><td>The ones you type, generate or import.</td>
+      <td>Signing in to your servers.</td>
+      <td>Stored in the iOS Keychain, protected by Face ID, Touch ID or Titan's own passcode. They only go to iCloud Keychain if you choose so.</td></tr>
+  <tr><td>Saved commands, history, preferences and session logs (if you turn them on)</td><td>What you set up and use.</td>
+      <td>Making the app work.</td><td>No. They stay on your device.</td></tr>
+  <tr><td>iCloud sync (optional)</td><td>If you turn it on, your server list.</td>
+      <td>Having it on your other devices.</td>
+      <td>Yes, to your own iCloud account (key-value store and, if you choose, iCloud Keychain). Apple manages that storage; we have no access to it.</td></tr>
+  <tr><td><code>.titan</code> backups</td><td>The ones you create.</td>
+      <td>Saving and restoring your setup.</td>
+      <td>Encrypted with the password you choose and saved wherever you decide. If you lose the password they cannot be recovered.</td></tr>
+  <tr><td>Notifications</td><td>Created by the device itself (for example, the terminal bell).</td>
+      <td>Telling you what happens in a session.</td><td>No. We do not use any remote notification service.</td></tr>
+</table>
 
-<h2>iCloud (optional)</h2>
-<p>If you turn it on, your server list syncs to your other devices through your own iCloud account (key-value store and, if you choose, iCloud Keychain). Apple manages that storage; we have no access to it.</p>
+<h2>3. Legal basis</h2>
+<p>The data the app stores is what is needed to provide the features you
+ask for (performance of the service). Face ID, Touch ID and notifications
+depend on iOS permissions, which you can withdraw at any time in
+Settings.</p>
 
-<h2>Backups</h2>
-<p><code>.titan</code> backups are encrypted with the password you choose and saved wherever you decide. If you lose the password they cannot be recovered.</p>
-
-<h2>Notifications</h2>
-<p>Notifications (for example, the terminal bell) are created by the device itself. We do not use any remote notification service.</p>
-
-<h2>What we don't do</h2>
+<h2>4. Who it is shared with</h2>
+<p>We don't sell or share data with anyone, because we don't have any.
+There is no advertising, no cross-app tracking and no third-party
+analytics or crash-reporting tools. The app only talks to:</p>
 <ul>
-  <li>No sign-up or log-in.</li>
-  <li>No advertising and no cross-app tracking.</li>
-  <li>No third-party analytics or crash-reporting tools.</li>
-  <li>We don't sell or share data, because we don't have any.</li>
+  <li><strong>Your servers</strong> and, if you set one up, the proxy you choose.</li>
+  <li><strong>Apple</strong>: the iOS Keychain and, only if you turn on sync, your iCloud. <a href="https://www.apple.com/legal/privacy/">Apple's policy</a>.</li>
 </ul>
 
-<h2>Children</h2>
-<p>The app is not aimed at children under 13 and collects no data from anyone, including them.</p>
+<h2>5. How long it is kept</h2>
+<ul>
+  <li>What is on your device is kept until you delete it in the app or delete the app.</li>
+  <li>What is synced to iCloud stays in your account until you delete it or turn sync off.</li>
+  <li><code>.titan</code> backups stay where you saved them until you delete them.</li>
+</ul>
 
-<h2>Changes and contact</h2>
-<p>If the app ever starts sharing data, we will say so here before turning it on and change the date above.</p>
-<p>Questions: <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a></p>
-</section>
+<h2>6. How to delete your data and withdraw consent</h2>
+<ul>
+  <li><strong>In the app</strong>: delete the servers, commands or logs you don't want to keep.</li>
+  <li><strong>Deleting the app</strong>: removes everything that was on the device.</li>
+  <li><strong>iCloud</strong>: turn sync off in Titan or manage your storage in iOS Settings.</li>
+  <li><strong>Permissions</strong>: Face ID and notifications can be withdrawn in iOS Settings.</li>
+  <li><strong>By email</strong>: write to <a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>. Since we hold none of your data, we will reply explaining how to delete what is on your device or in your iCloud.</li>
+</ul>
 
-</main>
+<h2>7. Your rights</h2>
+<p>You can request access, rectification, erasure, restriction, objection
+and portability of your data by writing to the contact email. If you
+believe they have not been respected, you can complain to the Spanish
+Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>).</p>
+
+<h2>8. Children</h2>
+<p>This app is not aimed at children under 14 and collects no data from
+anyone, including them.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, this page and its date will be updated. If the
+app ever starts sharing data, we will say so here before turning it on.</p>
+
+<h2>10. Contact</h2>
+<p>Questions:
+<a href="mailto:neuralbeat.dev@gmail.com">neuralbeat.dev@gmail.com</a>.</p>
+</div>
+
+<footer>Jean Michel Matos Rodríguez (Neural Beat) — © 2026</footer>
 </body>
 </html>
